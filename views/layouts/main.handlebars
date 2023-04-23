@@ -17,7 +17,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
    
-
+<script>
+    window.drift.on('startConversation',function(event){ { dataLayer.push({ 'event': 'driftInteraction', 'eventCategory': 'drift', 'eventAction': 'start conversation', 'eventLabel': 'drift>start conversation id: ' + event.conversationId }); } })
+</script>
     <!-- Favicon -->
     {{!-- <link href="" rel="icon"> --}}
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
